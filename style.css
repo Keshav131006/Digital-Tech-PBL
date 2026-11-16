@@ -1,0 +1,230 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #222;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #003078;
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Center Dashboard Container */
+.main-content {
+    max-width: 1050px;
+    margin: 35px auto 50px;
+    padding: 0 24px;
+}
+
+/* Hero Section */
+.hero-banner {
+    background: linear-gradient(135deg, #004aad, #003078);
+    color: white;
+    padding: 42px 36px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 74, 173, 0.15);
+    margin-bottom: 30px;
+}
+
+.hero-banner h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.hero-banner p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    max-width: 680px;
+    color: #e8f0fe;
+    margin-bottom: 22px;
+}
+
+.hero-btn {
+    background-color: white;
+    color: #004aad;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.hero-btn:hover {
+    background-color: #e8f0fe;
+}
+
+/* 3-Column Info Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+.info-card {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 4px solid #004aad;
+}
+
+.info-card h3 {
+    color: #003078;
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+.info-card p {
+    color: #4a5568;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+}
+
+.card-btn {
+    align-self: flex-start;
+    background-color: #eef4ff;
+    color: #004aad;
+    border: 1px solid #c3d7ff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    background-color: #004aad;
+    color: white;
+}
+
+/* Support Footer Strip */
+.support-strip {
+    background: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border-left: 4px solid #004aad;
+    font-size: 0.95rem;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 28px;
+}
+
+/* Embedded Chatbox Container */
+.chat-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #004aad;
+    color: white;
+    padding: 16px 24px;
+    text-align: left;
+}
+
+.chat-box {
+    height: 360px;
+    padding: 20px 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #fafafa;
+}
+
+.message {
+    padding: 12px 16px;
+    border-radius: 14px;
+    max-width: 72%;
+    line-height: 1.45;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.bot-message {
+    background-color: #e2e8f0;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.user-message {
+    background-color: #004aad;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+    background-color: white;
+}
+
+#user-input {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+#send-btn {
+    padding: 16px 28px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+#send-btn:hover {
+    background-color: #003078;
+}

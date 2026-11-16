@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Portal | BCA Admissions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">University Admissions Portal</div>
+        <nav class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#highlights">Eligibility &amp; Deadlines</a>
+            <a href="#admissions-chat">Admissions Desk</a>
+        </nav>
+    </header>
+
+    <!-- Main Center Content -->
+    <main class="main-content" id="overview">
+        <section class="hero-banner">
+            <h1>Bachelor of Computer Applications (BCA)</h1>
+            <p>Your journey to a BCA degree starts here. Explore admission requirements below or ask our AI Admissions Desk for instant answers.</p>
+            <button class="hero-btn" onclick="focusChat()">Ask Admissions Desk</button>
+        </section>
+
+        <!-- 3-Column Quick Info Cards -->
+        <section class="cards-grid" id="highlights">
+            <div class="info-card">
+                <h3>Program Eligibility</h3>
+                <p>Candidates must have passed <strong>10+2 or equivalent</strong> with at least <strong>50% aggregate marks</strong>.</p>
+                <button class="card-btn" onclick="askBot('What are the eligibility criteria for the BCA program?')">Ask about Eligibility</button>
+            </div>
+
+            <div class="info-card">
+                <h3>Offer Letter Timeline</h3>
+                <p>Selected applicants receive a <strong>7 to 10 day buffer</strong> from the date of issue to accept their offer.</p>
+                <button class="card-btn" onclick="askBot('How many days do I have to accept my offer letter?')">Ask about Deadlines</button>
+            </div>
+
+            <div class="info-card">
+                <h3>Application Status</h3>
+                <p>Already applied? Check your live application progress anytime using your enrollment credentials.</p>
+                <button class="card-btn" onclick="askBot('How can I check my BCA application status?')">Check Status Steps</button>
+            </div>
+        </section>
+
+        <!-- Direct Escalation Banner -->
+        <section class="support-strip">
+            <p>Need personalized assistance with documents or fee payment? Contact human support at <strong>admissions@jiit.ac.in</strong></p>
+        </section>
+
+        <!-- Embedded Smart Desk Chat Interface -->
+        <section class="chat-container" id="admissions-chat">
+            <div class="chat-header">
+                <h3>Admissions Desk</h3>
+            </div>
+            <div class="chat-box" id="chat-box">
+                <div class="message bot-message">Hello and Welcome to the admission portal. How can I help you?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+                <button id="send-btn">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
